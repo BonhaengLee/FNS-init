@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SnapCard = (props: any) => {
     return (
-        <div className="flex-item">
+        <div>
             <SnapCardContainer>
                 <SnapThumbnail>{props.source}</SnapThumbnail>
                 <SnapTitle>{props.title}</SnapTitle>
@@ -13,18 +13,17 @@ const SnapCard = (props: any) => {
 };
 
 const SnapCardContainer = styled.div`
+    width: 311px;
     border: 1px solid ${({ theme }) => theme.mode.borderColor};
 `;
 
 const SnapTitle = styled.h2`
-    width: 305px;
     height: 53px;
 `;
 
 const SnapThumbnail = styled.div`
-    width: 305px;
     height: 250px;
-    background-color: gray;
+    background: #eeeeee;
 `;
 
 export default SnapCard;

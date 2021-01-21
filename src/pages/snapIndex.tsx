@@ -11,6 +11,9 @@ const snaps = [
     { id: 4, title: 'title4', source: 'white' },
     { id: 5, title: 'title5', source: 'black' },
     { id: 6, title: 'title6', source: 'gray' },
+    { id: 7, title: 'title7', source: 'white' },
+    { id: 8, title: 'title8', source: 'black' },
+    { id: 9, title: 'title9', source: 'gray' },
 ];
 
 export default function SnapIndex() {
@@ -18,24 +21,24 @@ export default function SnapIndex() {
         <div>
             <NavLayout>
                 <LeftMenu />
-                <SnapThumbView>
+                <SnapThumbListWrapper>
                     <SnapCardWrapper>
                         {snaps.map((snap) => (
                             <SnapCard key={snap.id} {...snap} />
                         ))}
                     </SnapCardWrapper>
-                </SnapThumbView>
+                </SnapThumbListWrapper>
             </NavLayout>
         </div>
     );
 }
 
-const SnapThumbView = styled.div`
+const SnapThumbListWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     margin: 0 100px;
     padding: 60px 0;
-    width: 950px;
+    width: 1080px;
     margin-left: auto;
 `;
 
